@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="RZAppNoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/rz_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/rz_colorPrimaryDark</item>
+        <item name="colorAccent">@color/rz_colorAccent</item>
+    </style>
+</resources>

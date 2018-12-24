@@ -1,0 +1,35 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rayzhang.android.rzalbum">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/rz_app_name"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".RZAlbumActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/RZAppNoActionBarTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden" />
+
+        <activity
+            android:name=".view.PreviewPhotoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/RZAppNoActionBarTheme" />
+
+        <!-- 拍照適配android7.0 up-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rz_file_path"
+                tools:replace="android:resource" />
+        </provider>
+    </application>
+</manifest>
